@@ -38,6 +38,30 @@ return {
                         filetype = 'snacks_layout_box',
                     },
                 },
+                highlights = {
+                    -- Active buffer (selected)
+                    buffer_selected = {
+                        fg = '#ffffff',
+                        bg = '#3b82f6', -- Blue background for active buffer
+                        bold = true,
+                        italic = false,
+                    },
+
+                    -- Inactive buffers
+                    buffer = {
+                        fg = '#9ca3af',
+                        bg = '#1f2937',
+                    }, -- Tab separator
+                    separator = {
+                        fg = '#1f2937',
+                        bg = '#1f2937',
+                    },
+
+                    separator_selected = {
+                        fg = '#1f2937',
+                        bg = '#3b82f6',
+                    },
+                },
                 ---@param opts bufferline.IconFetcherOpts
                 get_element_icon = function(opts)
                     return LazyVim.config.icons.ft[opts.filetype]
