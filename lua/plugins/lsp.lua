@@ -67,7 +67,7 @@ return {
                 servers = {
                     -- Add clangd for C/C++ (and related languages) if you wish to use its LSP formatting:
                     clangd = {
-                        cmd = { 'clangd', '--background-index' },
+                        cmd = { 'clangd', '--background-index', '--header-insertion=never' },
                         filetypes = { 'c', 'cpp', 'objc', 'objcpp', 'cuda' },
                         root_dir = require('lspconfig.util').root_pattern('compile_commands.json', 'compile_flags.txt', '.git', '.clangd', '.clang-format'),
                         -- Additional clangd-specific settings can be added here.
